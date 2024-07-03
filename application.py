@@ -23,13 +23,25 @@
 #     print("Chebyshev Distance:", distance)
 
 
-def chebyshev_distance_way2(p1, p2):
-    #Calculate the Chebyshev distance between two points second way."""
-    return max(map(lambda x_y: abs(x_y[0] - x_y[1]), zip(p1, p2)))
+# def chebyshev_distance_way2(p1, p2):
+#     #Calculate the Chebyshev distance between two points second way."""
+#     return max(map(lambda x_y: abs(x_y[0] - x_y[1]), zip(p1, p2)))
+
+# if __name__ == "__main__":
+#     point1 = (1, 2, 3)
+#     point2 = (4, 5, 6)
+#     distance = chebyshev_distance_way2(point1, point2)
+#     print("Chebyshev Distance:", distance)
+
+import numpy as np
+
+def chebyshev_distance_way3(p1, p2):
+    """Calculate the Chebyshev distance between two points."""
+    return np.max(np.abs(np.array(p1) - np.array(p2)))
 
 if __name__ == "__main__":
     point1 = (1, 2, 3)
     point2 = (4, 5, 6)
-    distance = chebyshev_distance_way2(point1, point2)
+    distance = chebyshev_distance_way3(point1, point2)
     print("Chebyshev Distance:", distance)
 
